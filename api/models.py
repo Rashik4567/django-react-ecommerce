@@ -71,6 +71,13 @@ class Tag(models.Model):
         return self.Name
 
 
+class Variations(models.Model):
+    Common_title = models.CharField(max_length=355)
+
+    def __str__(self):
+        return self.Common_title
+
+
 class Product(models.Model):
     Title = models.CharField(max_length=355)
     Description = models.CharField(max_length=3_555)
@@ -93,6 +100,8 @@ class Product(models.Model):
     Second_video = models.FileField(
         upload_to="ProductVideos/", null=True, blank=True)
     Stock = models.IntegerField()
+    Product_Variation = models.ForeignKey(
+        Variations, on_delete=models.SET_NULL, null=True, blank=True)
     Expire_date = models.DateField(null=True, blank=True)
     Category_Of_Product = models.ForeignKey(
         Category, on_delete=models.SET_NULL, null=True, blank=True)
@@ -120,18 +129,6 @@ class Product(models.Model):
 
     class Meta:
         get_latest_by = "Release_date"
-
-
-class Variations(models.Model):
-    Product = models.ForeignKey(
-        Product,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True)
-    Common_title = models.CharField(max_length=355)
-
-    def __str__(self):
-        return self.Common_title
 
 
 class Review(models.Model):
@@ -164,4 +161,3 @@ class Banner(models.Model):
 
     class Meta:
         get_latest_by = "Creation_date"
-

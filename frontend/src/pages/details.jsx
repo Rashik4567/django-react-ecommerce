@@ -8,13 +8,18 @@ class Details extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      details: {}
+      details: {},
+      variations: [],
     };
+    this.fetchData = this.fetchData.bind(this);
+    this.fetchVariations = this.fetchVariations.bind(this);
   };
 
-  componentDidMount() {
+    componentDidMount() {
     const id = this.props.match.params.id;
-    this.fetchData(id);
+      this.fetchData(id);
+      this.fetchVariations(id)
+
   }
 
   fetchData(id) {
@@ -26,8 +31,20 @@ class Details extends Component {
     }))
   }
 
+
+  fetchVariations(pk) {
+    console.log("Fetching product variations ...");
+    fetch("http://127.0.0.1:8000/variations/" + pk)
+      .then((response) => response.json())
+      .then((data) => this.setState({
+      variations: data
+    }))
+   }
+
+
   render() {
     let product = this.state.details;
+    let varitaions = this.state.variations;
     return (
       <div className="maindetails">
         <Header></Header>
@@ -35,6 +52,15 @@ class Details extends Component {
         <h2 className="ProductPricd">{product.Price}</h2>
         <p className="Productdetails">{product.Description}</p>
         <p className="Productdetails">{product.Description}</p>
+
+        <h2>Variations</h2>
+        <ul>
+          {varitaions.map(function(varient, i) {
+            return (
+              <li>{varient.Title }</li>
+            );
+          })}
+        </ul>
       </div>
     )
   }

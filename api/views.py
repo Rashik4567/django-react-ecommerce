@@ -6,7 +6,7 @@ from django.http.response import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from .serializers import BannerSerializer,  CategorySerializer, ProductAddSerializer, CustomerSerializer, ItemSerializer, ProductSerializer, SellerSerializer, ShippingCostSerializer,  TagsSerializer, VariationSerializer
+from .serializers import BannerSerializer, ProductAddSerializer, ProductSerializer,  TagsSerializer
 from .models import   Banner, Category, Customer, Item, Product, Review, Seller, ShippingCosts, Tag, Variations
 
 
@@ -42,74 +42,6 @@ def reviews(request):
     return Response(serializer.data)
 
 
-@api_view(["GET"])
-def categories(request):
-    categories = Category.objects.all()
-    serializer = CategorySerializer(categories, many=True)
-    return Response(serializer.data)
-
-
-@api_view(["GET"])
-def categoryget(request, pk):
-    category = Category.objects.get(id=pk)
-    serializer = CategorySerializer(category, many=False)
-    return Response(serializer.data)
-
-
-@api_view(["GET"])
-def customerget(request, pk):
-    customer = Customer.objects.get(id=pk)
-    serializer = CustomerSerializer(customer, many=False)
-    return Response(serializer.data)
-
-
-@api_view(["POST"])
-def customercreate(request):
-    serializer = CustomerSerializer(
-        data=request.data, context={'request': request})
-    if serializer.is_valid():
-        serializer.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-@api_view(["GET"])
-def sellerget(request, pk):
-    seller = Seller.objects.all(id=pk)
-    serializer = SellerSerializer(seller, many=False)
-    return Response(serializer.data)
-
-
-@api_view(["POST"])
-def sellercreate(request):
-    if request.method == "POST":
-        serializer = SellerSerializer(
-            data=request.data, context={'request': request})
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-@api_view(["GET"])
-def shipping_cost_get(request, country, sellerid):
-    fields = ShippingCosts.objects.get(
-        Country_Region=country, Seller=Seller.objects.get(id=sellerid))
-    serializer = ShippingCostSerializer(fields, many=False)
-    return Response(serializer.data)
-
-
-@api_view(["POST"])
-def shipping_cost_add(request):
-    if request.method == "POST":
-        serializer = ShippingCostSerializer(
-            data=request.data, context={'request': request})
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(["GET"])
@@ -120,16 +52,10 @@ def tags(request, pk):
 
 
 @api_view(["GET", "POST"])
-def variations(request):
-    variations = Variations.objects.all()
-    serializer = VariationSerializer(variations, many=True)
-    return Response(serializer.data)
-
-
-@api_view(["GET", "POST"])
-def items(request):
-    items = Item.objects.all()
-    serializer = ItemSerializer(items, many=True)
+def variations(request, pk):
+    product = Product.objects.get(id=pk)
+    variations_of_product = Product.objects.filter(Product_Variation=product.Product_Variation).exclude(id=pk)
+    serializer = ProductSerializer(variations_of_product, many=True)
     return Response(serializer.data)
 
 
