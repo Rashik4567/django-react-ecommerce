@@ -1,0 +1,74 @@
+body {
+    overflow-x: hidden;
+    background: #ede7f6;
+}
+
+.adsection {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    justify-content: center;
+}
+
+.sectiontitle {
+    margin: auto;
+    padding-bottom: 5px;
+    width: 300px;
+    text-align: center;
+    margin-top: 50px;
+    border-bottom: 1px solid black;
+}
+
+.cardimage img {
+    height: 180px;
+    width: 286px;
+    object-fit: cover;
+}
+
+.productcard {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.products {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+.product {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 10px;
+}
+
+.btncontainer {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.showmorebtn {
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: blue;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width:1111px) {
+    .row {
+        display: block;
+    }
+}

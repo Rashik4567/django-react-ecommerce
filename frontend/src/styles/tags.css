@@ -1,0 +1,19 @@
+.tag {
+    background-color: var(--tag-color);
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+
+.tag p {
+    font-size: 15px;
+    font-weight: bolder;
+    margin: auto;
+    margin-right: 4px;
+    margin-left: 4px;
+}

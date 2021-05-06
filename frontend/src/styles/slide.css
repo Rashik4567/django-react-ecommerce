@@ -1,0 +1,13 @@
+.slideimage {
+    width: 100%;
+    height: var(--h);
+    object-fit: cover;
+}
+
+.mainslide {
+    margin: auto;
+    width: var(--w);
+    overflow: hidden;
+    border-radius: 20px;
+    margin-top: 10vh;
+}
