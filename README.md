@@ -45,11 +45,11 @@ installation makes a must needed migration for the first time. After each time y
 The database is SQLITE by default.
 
 ## Development and contribution
-**When contributing, you don't need to worry about anything. If you think you will break while updating or developing, you are wrong.** <br />
-For development, you first need to **FORK** the repository from the official site. <br />
-Then simply run the server on localhost and make changes you want. <br />
+**When contributing, you don't need to worry about anything. If you think you will break while updating or developing, you are wrong.** <br>
+For development, you first need to **FORK** the repository from the official site. <br>
+Then simply run the server on localhost and make changes you want. <br>
 After making changes, you need to commit the changes and push it to github. After that, you can now open a pull request describing your changes. If we  think your changes are worth, we will accept the request and you will be one of the contributor/s.
-<br /> <br /> <br />
+<br> <br> <br>
 > :warning: **Please beaware of code formation. Unmatched formation may create unnecessary conflicts**, we use **Pretter code formatter** for javascript and **autopep8** for python.
 <br> <br>
 For our database planning, you can check https://drawsql.app/ai-explorers/diagrams/r-shop-premium 
