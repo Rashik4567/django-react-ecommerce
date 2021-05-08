@@ -39,6 +39,13 @@ $ python3 ./install.py
 
 
 ## Running
-**After completing installation, you can run the server using `python3 .`(`python .` on windows).** <br>
+**After completing installation, you can run the server using `python3 .`(`python .` on windows).** <br /><br />
 installation makes a must needed migration for the first time. After each time you change database models, you need to migrate manually by using `$ python3 manage.py makemigratios` and if it is successfully executed, `$ python3 manage.py migrate`. <br>
 <br>
+The database is SQLITE by default.
+
+## Development
+**When contributing, you don't need to worry about anything. If you think you will break while updating or developing, you are wrong.** <br />
+For development, you first need to **FORK** the repository from the official site. <br />
+Then simply run the server on localhost and make changes you want. <br />
+After making changes, you need to commit the changes and push it to github. After that, you can now open a pull request describing your changes. If we  think your changes are worth, we will accept the request and you will be one of the contributor/s.
