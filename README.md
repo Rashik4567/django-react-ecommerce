@@ -1,4 +1,4 @@
-Hello, This is a online store backbone with all the features needed in it. 
+## This is a online store backbone with all the features(including payment methodes and seller varifications and more!) needed in it. 
 
 Its based on **Python Django framework** with restful apis with **Django rest framework**. The frontend is made with **React, react/cli, create-react-app**. <br />
 Please check the installation steps below to get started.
