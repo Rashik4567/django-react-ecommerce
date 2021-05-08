@@ -8,7 +8,6 @@ Please check the installation steps below to get started.
 <ul>
   <li>
     Python3 ( build on version 3.9.2 )
-      <\li>
   <li>
     Node.js ( build on version 14.16.0 )
     </li>
