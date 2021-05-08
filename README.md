@@ -5,6 +5,7 @@ Please check the installation steps below to get started.
 
 ## PRE-INSTALLATIONS
 **These are the dependencies you need to run this project.**
+**If you encounter any errors or bugs at any stage of the project, please create an issue.**
 <ul>
   <li>
     Python3 ( build on version 3.9.2 )
@@ -32,6 +33,12 @@ $ git clone "https://github.com/Rashik4567/django-react-ecommerce.git"
 
 **Step-2:** Inside your local copy(clone) of the repo, open up a terminal(or cmd) and use command, <br />
 ```bash
-python3 ./install.py
+$ python3 ./install.py
 ```
 > :warning: **This step requires python and node installed.**, In windows you dont need the python version tag. Then go with ```python ./install.py```
+
+
+## Running
+**After completing installation, you can run the server using `python3 .`(`python .` on windows).** <br>
+installation makes a must needed migration for the first time. After each time you change database models, you need to migrate manually by using `$ python3 manage.py makemigratios` and if it is successfully executed, `$ python3 manage.py migrate`. <br>
+<br>
