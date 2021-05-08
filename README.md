@@ -16,6 +16,7 @@ Please check the installation steps below to get started.
 
 ## Installation
 **If you made sure the pre-installations, you may advance to this step.**
+<br />
 **Step-1:** Clone the repo from Github. <br>
 <ul>
 <li>From Gitbub, download the repo zip and extract it. <br />
