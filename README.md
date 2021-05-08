@@ -46,13 +46,23 @@ The database is SQLITE by default.
 
 ## Development and contribution
 **When contributing, you don't need to worry about anything. If you think you will break while updating or developing, you are wrong.** <br> <br>
-For development, you first need to **FORK** the repository from the official repository.( check https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) <br>
+For development, you first need to **FORK** the repository from the official repository.(Please check below for help) <br>
 Then simply run the server on localhost and make changes you want. <br>
-After making changes, you need to commit the changes and push it to github. After that, you can now open a pull request describing your changes. If we  think your changes are worth, we will accept the request and you will be one of the contributor/s.
+After making changes, you need to commit the changes and push it to github. After that, you can now open a pull request describing your changes. If we  think your changes are worth, we will accept the request and you will be one of the contributor/s.(Please check below for help)
 <br> <br> <br>
 > :warning: **Please beaware of code formation. Unmatched formation may create unnecessary conflicts**, we use **Pretter code formatter** for javascript and **autopep8** for python. <br>
 <br>
 
 For our database planning, you can check https://drawsql.app/ai-explorers/diagrams/r-shop-premium 
 ![rshop database](https://user-images.githubusercontent.com/58215479/117542413-5ffdea80-b03a-11eb-8776-899f1773518b.png)
+
+
+
+## Help and links
+About forking a repository  : https://docs.github.com/en/github/getting-started-with-github/fork-a-repo <br> <br>
+About commiting changes     : https://docs.github.com/en/github/getting-started-with-github/pushing-commits-to-a-remote-repository <br> <br>
+About pushing to github     : https://github.com/git-guides/git-push <br> <br>
+About pull request          : https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request <br> <br>
+
+**For more help, please create an issue.**
 
