@@ -1,5 +1,5 @@
 from django.db.models import fields
-from .models import   Banner, Category, Customer, Item, Product, Review, Seller, ShippingCosts, Tag, Variations
+from .models import Banner, Category, Customer, Item, Product, Review, Seller, ShippingCosts, Tag, Variations
 from rest_framework import serializers
 
 
@@ -33,9 +33,30 @@ class TagsSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-
 class BannerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Banner
         fields = "__all__"
 
+
+class ReviewPostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Review
+        fields = ["To", "Rating", "Comment"]
+
+    def save(self, **kwargs):
+        User = self.context["request"].user
+        By = Customer.objects.get(User=User)
+        validated_data = dict(
+            list(self.validated_data.items()) +
+            list(kwargs.items())
+        )
+        validated_data["By"] = By
+        self.instance = self.create(validated_data)
+        return self.instance
+
+
+class ReviewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Review
+        fields = "__all__"
