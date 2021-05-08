@@ -8,13 +8,12 @@ Please check the installation steps below to get started.
 <ul>
 <li>From Gitbub, download the repo zip and extract it. <br />
 <img src="./github.zip.png" alt="github download zip">
-<br />
+<br /></li>
+  <li>
 Or from github cli, <br />
   
 ```bash
 $ git clone "https://github.com/Rashik4567/django-react-ecommerce.git"
 ```
 </li>
-
-<li></li>
 </ul>
