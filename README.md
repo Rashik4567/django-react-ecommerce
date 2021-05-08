@@ -10,6 +10,7 @@ Please check the installation steps below to get started.
 <img src="./github.zip.png" alt="github download zip">
 <br />
 Or from github cli, <br />
+  
 ```bash
 $ git clone "https://github.com/Rashik4567/django-react-ecommerce.git"
 ```
