@@ -4,11 +4,11 @@ Its based on **Python Django framework** with restful apis with **Django rest fr
 Please check the installation steps below to get started.
 
 ## PRE-INSTALLATIONS
-**These are the dependencies you need to run this project.***
+**These are the dependencies you need to run this project.**
 <ul>
   <li>
     Python3 ( build on version 3.9.2 )
-  <\li>
+      <\li>
   <li>
     Node.js ( build on version 14.16.0 )
     </li>
@@ -34,4 +34,4 @@ $ git clone "https://github.com/Rashik4567/django-react-ecommerce.git"
 ```bash
 python3 ./install.py
 ```
-> :warning: **This step requires python, In windows you dont need the python version tag. Then go with ```bash python ./install.py```  **
+> :warning: **This step requires python, In windows you dont need the python version tag. Then go with ```python ./install.py```  **
