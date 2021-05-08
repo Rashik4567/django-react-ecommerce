@@ -34,4 +34,4 @@ $ git clone "https://github.com/Rashik4567/django-react-ecommerce.git"
 ```bash
 python3 ./install.py
 ```
-> :warning: **This step requires python, In windows you dont need the python version tag. Then go with ```python ./install.py```  **
+> :warning: **This step requires python and node installed.**, In windows you dont need the python version tag. Then go with ```python ./install.py```
