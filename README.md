@@ -35,7 +35,7 @@ $ git clone "https://github.com/Rashik4567/django-react-ecommerce.git"
 ```bash
 $ python3 ./install.py
 ```
-> :warning: **This step requires python and node installed.**, In windows you dont need the python version tag. Then go with ```python ./install.py```
+> :warning: **This step requires python and node installed.** In windows you dont need the python version tag. Then go with ```python ./install.py```
 
 
 ## Running
@@ -47,10 +47,10 @@ The database is SQLITE by default.
 ## Development and contribution
 **When contributing, you don't need to worry about anything. If you think you will break while updating or developing, you are wrong.** <br> <br>
 <ul>
-<li> For development, you first need to **FORK** the repository from the official repository. **( Please check below for help )** <br>
-<li> Then simply run the server on localhost and make changes you want. <br>
+<li> For development, you first need to **FORK** the repository from the official repository. **( Please check below for help )** </li> <br>
+<li> Then simply run the server on localhost and make changes you want. </li> <br>
 <li> After making changes, you need to commit the changes and push it to github. After that, you can now open a pull request describing your changes. If we  think your changes are worth, we will accept the request and you will be one of the contributor/s.  ( **Please check below for help** )
-</ul><br> <br> <br>
+</li></ul><br> <br> <br>
 > :warning: **Please beaware of code formation. Unmatched formation may create unnecessary conflicts**, we use **Pretter code formatter** for javascript and **autopep8** for python. <br>
 <br>
 
