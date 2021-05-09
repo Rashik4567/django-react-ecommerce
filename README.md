@@ -55,7 +55,7 @@ The database is SQLITE by default.
 <br>
 
 For our database planning, you can check https://drawsql.app/ai-explorers/diagrams/r-shop-premium 
-![rshop database](https://user-images.githubusercontent.com/58215479/117542413-5ffdea80-b03a-11eb-8776-899f1773518b.png)
+<img src="./rshop database.png" alt="database design">
 
 
 
