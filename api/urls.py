@@ -10,5 +10,5 @@ urlpatterns = [
     path('variations/<int:pk>', views.variations),
     path("banner", views.banner),
     path("review/create", views.review_post),
-    path("review/product/<int: product_id>", views.reviews_of_product)
+    path("review/product/<int:product_id>", views.reviews_of_product)
 ]
