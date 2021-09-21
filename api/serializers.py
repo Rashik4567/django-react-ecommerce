@@ -1,5 +1,5 @@
 from django.db.models import fields
-from .models import Banner, Category, Customer, Item, Product, Review, Seller, ShippingCosts, Tag, Variations
+from .models import Banner, Customer, Product, Review, Tag, Seller
 from rest_framework import serializers
 
 
@@ -17,12 +17,12 @@ class ProductAddSerializer(serializers.ModelSerializer):
 
     def save(self, **kwargs):
         User = self.context["request"].user
-        Seller = Seller.objects.get(User=User)
+        seller = Seller.objects.get(User=User)
         validated_data = dict(
             list(self.validated_data.items()) +
             list(kwargs.items())
         )
-        validated_data["Seller"] = Seller
+        validated_data["Seller"] = seller
         self.instance = self.create(validated_data)
         return self.instance
 

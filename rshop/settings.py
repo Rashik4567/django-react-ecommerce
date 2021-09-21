@@ -32,21 +32,32 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # django requirements
     'django.contrib.admin',
-    'corsheaders',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # cross origin resorce shearing
+    'corsheaders',
+    
+    # rest framework
     'rest_framework',
     'rest_framework.authtoken',
     'rest_auth',
-    'django_countries',
-    'api.apps.ApiConfig',
-    'django.contrib.sites',
+    
+    # allauth
     'allauth',
     'allauth.account',
+
+    # My apps
+    'api.apps.ApiConfig',
+
+    # extra libraries
+    'django_countries',
+    'django.contrib.sites',
     'rest_auth.registration',
 ]
 

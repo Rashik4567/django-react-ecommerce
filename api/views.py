@@ -11,7 +11,7 @@ from .models import Banner, Category, Customer, Item, Product, Review, Seller, S
 
 
 @api_view(["GET"])
-def productlist(request, end):
+def productlist(request, end:int):
     products = Product.objects.all().order_by("-Release_date")[:(int(end))]
     serializer = ProductSerializer(products, many=True)
     return Response(serializer.data)
@@ -29,7 +29,7 @@ def productcreate(request):
 
 
 @api_view(["GET"])
-def productget(request, pk):
+def productget(request, pk:int):
     product = Product.objects.get(id=pk)
     serializer = ProductSerializer(product, many=False)
     return Response(serializer.data)
@@ -43,14 +43,14 @@ def reviews(request):
 
 
 @api_view(["GET"])
-def tags(request, pk):
+def tags(request, pk:int):
     tags = Tag.objects.get(id=int(pk))
     serializer = TagsSerializer(tags, many=False)
     return Response(serializer.data)
 
 
 @api_view(["GET", "POST"])
-def variations(request, pk):
+def variations(request, pk:int):
     product = Product.objects.get(id=pk)
     variations_of_product = Product.objects.filter(
         Product_Variation=product.Product_Variation).exclude(id=pk)
@@ -78,7 +78,7 @@ def review_post(request):
 
 
 @api_view(["GET"])
-def reviews_of_product(request, product_id):
+def reviews_of_product(request, product_id:int):
     product = Product.objects.get(id=product_id)
     serializer = ReviewSerializer(product, many=True)
 

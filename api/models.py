@@ -4,6 +4,10 @@ from django.contrib.auth.models import User
 from django_countries.fields import CountryField
 
 
+# For more details for database design and progress, please visit the link below
+# https://drawsql.app/ai-explorers/diagrams/r-shop-premium
+
+
 RatingChoices = [
     (1, "1"),
     (2, "2"),
