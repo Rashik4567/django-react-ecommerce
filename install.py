@@ -43,3 +43,6 @@ def install():
     else:
         print("If you want to install, run this file again.")
         quit()
+
+if __name__ == '__main__':
+    install()
